@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.Events;
+using System.Collections.Generic;
 
 
 
@@ -9,7 +11,10 @@ using UnityEngine;
 /// 
 /// There will have to be an aditional script that provides this one with the room names.
 /// </summary>
-public class CurrentRoomHandler
+public class CurrentRoomHandler : MonoBehaviour
 {
-    
+    [Header("Current Room Name")]
+    public List<RoomName> currentRoomName;
+
+
 }
