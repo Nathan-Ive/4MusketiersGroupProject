@@ -25,4 +25,21 @@ public class RoomPositionHandler : MonoBehaviour
     public float roomYPosition;
     public float roomZPosition;
 
+    public Transform target;
+
+
+    void cameraTeleport() 
+    {
+        if (target == null) 
+        {
+            Vector3 targetPos = new Vector3(target.position.x, target.position.y, transform.position.z);
+            //targetPos = Vector3.Lerp(transform.position, targetPos);
+
+        }
+
+
+        //transform.position = ...;
+    }
+
+
 }
