@@ -18,10 +18,34 @@ using System.Collections.Generic;
 /// The coordinates it switches to is based on the index number of the Current Room in the CurrentRoomHandler.
 /// The coordinates it is provided will be handleded by another script.
 /// </summary>
+
+
 public class RoomSwapper : MonoBehaviour
 {
-    
+    public CurrentRoomHandler roomHandler;
+    public Camera mainCamera;
+    public List<Transform> rooms;
 
+    public void SwapToCurrentRoom()
+    {
+        Transform target = rooms[roomHandler.currentIndex];
 
+        Vector3 newPosition = target.position;
+        newPosition.z = mainCamera.transform.position.z;
+
+        mainCamera.transform.position = newPosition;
+    }
+
+    public void GoToNextRoom()
+    {
+        roomHandler.NextRoom(rooms.Count);
+        SwapToCurrentRoom();
+    }
+
+    public void GoToPreviousRoom()
+    {
+        roomHandler.PreviousRoom(rooms.Count);
+        SwapToCurrentRoom();
+    }
 
 }

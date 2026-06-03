@@ -7,8 +7,6 @@ public class InputManager : MonoBehaviour
     [Header("Direction Events")]
     public UnityEvent<Vector2Int> OnDirectionPressed; //For individual inputs
     public UnityEvent<Vector2Int> OnDirectionHeld; //For continuous inputs
-
-    [Header("Action Events")]
    
 
     void Update()

@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 
 
 
@@ -13,8 +14,19 @@ using System.Collections.Generic;
 /// </summary>
 public class CurrentRoomHandler : MonoBehaviour
 {
-    [Header("Current Room Name")]
-    public List<RoomName> currentRoomName;
+    public int currentIndex = 0;
 
+    public void NextRoom(int roomCount)
+    {
+        currentIndex++;
+        if (currentIndex >= roomCount)
+            currentIndex = 0;
+    }
 
+    public void PreviousRoom(int roomCount)
+    {
+        currentIndex--;
+        if (currentIndex < 0)
+            currentIndex = roomCount - 1;
+    }
 }
