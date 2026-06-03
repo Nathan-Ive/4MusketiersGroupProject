@@ -12,5 +12,5 @@ using System.Collections.Generic;
 /// </summary>
 public class RoomName : MonoBehaviour
 {
-    public string roomNames;
+    public string roomName;
 }
