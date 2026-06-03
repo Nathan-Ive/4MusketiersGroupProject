@@ -2,15 +2,21 @@ using UnityEngine;
 
 public class FoodInheritance : MonoBehaviour //it's a parent class
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+//use protected
     void Start()
     {
         
     }
+    public void Eating()
+    {
+
+    }
 
     // Update is called once per frame
-    void Update()
+    public void OnMouseDown()
     {
-        
+        //initiate a function here
+        Eating();
+        Destroy(gameObject);
     }
 }
