@@ -4,11 +4,7 @@ using System.Collections.Generic;
 
 
 /// <summary>
-/// This script will always be attached to a room to always make sure the CurrentRoomHandler has a name to reference.
-/// 
-/// If this script isn't attached to a room, it will not be considered a room by both the RoomHandler and RoomSwapper scripts.
-/// 
-/// The intent is that this ends up being a list of names to be displayed that can be added on to through the CurrentRoomHandler script.
+/// The text for Text Mesh Pro to display for a given room. Attach this script to any room and give it a name so the RoomSwapper knows what to display.
 /// </summary>
 public class RoomName : MonoBehaviour
 {
