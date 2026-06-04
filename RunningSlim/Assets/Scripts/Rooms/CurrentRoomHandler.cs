@@ -16,13 +16,20 @@ public class CurrentRoomHandler : MonoBehaviour
 {
     public int currentIndex = 0;
 
+
+    /// <summary>
+    /// Increases index number. Sets currentIndex to zero if the currentIndex goes higher than the roomCount value.
+    /// </summary>
+    /// <param name="roomCount">The amount of total rooms that exist in the index.</param>
     public void NextRoom(int roomCount)
     {
         currentIndex++;
         if (currentIndex >= roomCount)
             currentIndex = 0;
     }
-
+    /// <summary>
+    /// Decreases index number. Sets currentIndex to the highest index value (the last room in the index), if the currentIndex value is less than 0.
+    /// </summary>=
     public void PreviousRoom(int roomCount)
     {
         currentIndex--;

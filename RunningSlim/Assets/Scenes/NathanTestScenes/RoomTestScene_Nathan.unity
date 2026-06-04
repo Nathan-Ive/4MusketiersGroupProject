@@ -208,6 +208,7 @@ GameObject:
   m_Component:
   - component: {fileID: 216058664}
   - component: {fileID: 216058665}
+  - component: {fileID: 216058666}
   m_Layer: 0
   m_Name: UnhealthyShop
   m_TagString: Untagged
@@ -285,6 +286,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &216058666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216058663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9dcaf96d56d2d2489ad0632f64c9756, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomName: Unhealthy Shop
 --- !u!1 &279695711
 GameObject:
   m_ObjectHideFlags: 0
@@ -476,6 +490,7 @@ GameObject:
   m_Component:
   - component: {fileID: 439068078}
   - component: {fileID: 439068079}
+  - component: {fileID: 439068080}
   m_Layer: 0
   m_Name: Shop
   m_TagString: Untagged
@@ -553,6 +568,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &439068080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439068077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9dcaf96d56d2d2489ad0632f64c9756, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomName: Shop
 --- !u!1 &517260537
 GameObject:
   m_ObjectHideFlags: 0
@@ -585,11 +613,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1240987304}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -15}
-  m_SizeDelta: {x: 200, y: 50}
-  m_Pivot: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 15, y: -5}
+  m_SizeDelta: {x: 200, y: 100}
+  m_Pivot: {x: 0, y: 1}
 --- !u!114 &517260539
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -637,14 +665,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 24
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -926,7 +954,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9dcaf96d56d2d2489ad0632f64c9756, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomName: 
+  roomName: Training Room
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1154,6 +1182,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1175784439}
   - component: {fileID: 1175784440}
+  - component: {fileID: 1175784441}
   m_Layer: 0
   m_Name: Kitchen
   m_TagString: Untagged
@@ -1231,6 +1260,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1175784441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1175784438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9dcaf96d56d2d2489ad0632f64c9756, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  roomName: Kitchen
 --- !u!1 &1240987303
 GameObject:
   m_ObjectHideFlags: 0
@@ -1519,6 +1561,7 @@ MonoBehaviour:
   - {fileID: 1175784439}
   - {fileID: 439068078}
   - {fileID: 216058664}
+  roomNameLabel: {fileID: 517260539}
 --- !u!1 &1822370433
 GameObject:
   m_ObjectHideFlags: 0
