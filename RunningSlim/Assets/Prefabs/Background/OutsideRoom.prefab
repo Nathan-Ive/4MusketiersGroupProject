@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5283883371512979182, guid: 3673450c287bcd747bbc6bae9c8db742, type: 3}
       propertyPath: roomName
-      value: Shop
+      value: Outside
       objectReference: {fileID: 0}
     - target: {fileID: 5491935350725462191, guid: 3673450c287bcd747bbc6bae9c8db742, type: 3}
       propertyPath: m_Color.b
