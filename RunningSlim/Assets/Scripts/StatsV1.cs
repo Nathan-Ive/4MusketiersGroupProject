@@ -4,21 +4,28 @@ public class StatsV1 : MonoBehaviour
 {
     [Header("State")]
     [Tooltip("Toggle this to start/stop counting distance.")]
-    [SerializeField]  private bool TrainingRoom = false;
+    [SerializeField]  private bool _TrainingRoom = false;
 
     [Header("Tracked Data")]
-    [SerializeField] private float totalMeters = 0f;
+    [SerializeField] private float _totalMeters = 0f;
 
     [Header("Settings")]
-    [SerializeField] private float metersPerSecond = 2.0f;
-    [SerializeField] private float stamina = 100f;
-    [SerializeField] private float staminaDrainRate = 5.0f;
-    [SerializeField] private float maxStamina = 100f;
+    [SerializeField] private float _metersPerSecond = 2.0f;
+    [SerializeField] private float _stamina = 100f;
+    [SerializeField] private float _staminaDrainRate = 5.0f;
+    [SerializeField] private float _maxStamina = 100f;
 
+    public float Stamina
+    {
+        get
+        {
+            return _stamina;
+        } 
+    }
     // Returns the distance as a string for UI display
     public string GetFormattedDistance()
     {
-        float kilometers = totalMeters / 1000f;
+        float kilometers = _totalMeters / 1000f;
 
         if (kilometers >= 1)
         {
@@ -28,16 +35,16 @@ public class StatsV1 : MonoBehaviour
         else
         {
             // Returns meters with 1 decimal place
-            return totalMeters.ToString("F1") + " m";
+            return _totalMeters.ToString("F1") + " m";
         }
     }
 
     void Update()
     {
         // Only run the logic if the player is in the training room and has stamina
-        if (TrainingRoom == true)
+        if (_TrainingRoom == true)
         {
-            if (stamina > 0)
+            if (_stamina > 0)
             {
                 TrackDistance();
             }
@@ -47,21 +54,21 @@ public class StatsV1 : MonoBehaviour
     private void TrackDistance()
     {
         // Add to total distance based on time passed
-        totalMeters += metersPerSecond * Time.deltaTime;
+        _totalMeters += _metersPerSecond * Time.deltaTime;
 
         // Reduce stamina over time
-        stamina -= staminaDrainRate * Time.deltaTime;
+        _stamina -= _staminaDrainRate * Time.deltaTime;
 
         // Prevent stamina from dropping below zero
-        if (stamina < 0)
+        if (_stamina < 0)
         {
-            stamina = 0;
+            _stamina = 0;
         }
     }
 
     public void ResetStats()
     {
-        totalMeters = 0f;
-        stamina = maxStamina;
+        _totalMeters = 0f;
+        _stamina = _maxStamina;
     }
 }
