@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4487417f1324d0e4da6ed7bc12ef1f8f
+guid: 80b56f7174002eb44859828eed9245db
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5067644680274550704
-    second: '[Running Slim] Training Room_0'
+      213: -1477982299680349639
+    second: RunningSlimTrainingRoom_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -178,7 +178,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: '[Running Slim] Training Room_0'
+      name: RunningSlimTrainingRoom_0
       rect:
         serializedVersion: 2
         x: 0
@@ -193,8 +193,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0506658430c1ca9b0800000000000000
-      internalID: -5067644680274550704
+      spriteID: 932ec3bdde62d7be0800000000000000
+      internalID: -1477982299680349639
       vertices: []
       indices: 
       edges: []
@@ -213,7 +213,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      '[Running Slim] Training Room_0': -5067644680274550704
+      RunningSlimTrainingRoom_0: -1477982299680349639
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
