@@ -4,16 +4,16 @@ public class StatsV1 : MonoBehaviour
 {
     [Header("State")]
     [Tooltip("Toggle this to start/stop counting distance.")]
-    public bool TrainingRoom = false;
+    [SerializeField]  private bool TrainingRoom = false;
 
     [Header("Tracked Data")]
     [SerializeField] private float totalMeters = 0f;
 
     [Header("Settings")]
-    public float metersPerSecond = 2.0f;
-    public float stamina = 100f;
-    public float staminaDrainRate = 5.0f;
-    public float maxStamina = 100f;
+    [SerializeField] private float metersPerSecond = 2.0f;
+    [SerializeField] private float stamina = 100f;
+    [SerializeField] private float staminaDrainRate = 5.0f;
+    [SerializeField] private float maxStamina = 100f;
 
     // Returns the distance as a string for UI display
     public string GetFormattedDistance()
