@@ -2,14 +2,16 @@ using UnityEngine;
 
 public class FoodInheritance : MonoBehaviour //it's a parent class
 {
-//use protected
+    [SerializeField] private string _name;
+    [SerializeField] private string _desc;
+    //props best to use get set 
     void Start()
     {
         
     }
-    public void Eating()
+    protected void Eating()
     {
-
+        //protected means that only the parent and child classes have acces to this
     }
 
     // Update is called once per frame
@@ -19,4 +21,6 @@ public class FoodInheritance : MonoBehaviour //it's a parent class
         Eating();
         Destroy(gameObject);
     }
+   
+    //a UI that's seprate from the food prefab that gets the component and displays the food name and description.
 }

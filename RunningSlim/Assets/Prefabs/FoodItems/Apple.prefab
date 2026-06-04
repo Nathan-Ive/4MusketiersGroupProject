@@ -101,6 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5506d251d65018048a0d4930b2761d21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _name: Apple
 --- !u!58 &6997067372992016809
 CircleCollider2D:
   m_ObjectHideFlags: 0
