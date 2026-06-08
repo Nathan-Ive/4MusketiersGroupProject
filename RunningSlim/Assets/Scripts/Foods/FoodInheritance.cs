@@ -1,6 +1,6 @@
 using UnityEngine;
 
-abstract class FoodInheritance : MonoBehaviour //it's a parent class
+  class FoodInheritance : MonoBehaviour //it's a parent class
 {
     [SerializeField] private string _name;
     [SerializeField] private string _desc;
@@ -10,7 +10,10 @@ abstract class FoodInheritance : MonoBehaviour //it's a parent class
     {
         _getStats = FindAnyObjectByType<StatsV1>();
     }
-    abstract public void Eating();
+    virtual public void Eating()
+    {
+
+    }
     
         //protected means that only the parent and child classes have acces to this
     
