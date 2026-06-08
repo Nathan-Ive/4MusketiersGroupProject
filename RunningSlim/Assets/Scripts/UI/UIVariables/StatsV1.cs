@@ -22,7 +22,11 @@ public class StatsV1 : MonoBehaviour
         get
         {
             return _stamina;
-        } 
+        }
+        set { if(_stamina != 100f)
+            {
+            } 
+        }
     }
     // Returns the distance as a string for UI display
     public string GetFormattedDistance()
