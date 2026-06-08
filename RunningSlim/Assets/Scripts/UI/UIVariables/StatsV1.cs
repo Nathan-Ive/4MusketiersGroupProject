@@ -27,6 +27,20 @@ public class StatsV1 : MonoBehaviour
             {
             } 
         }
+
+    }
+    public float MaxStamina
+    {
+        get
+        {
+            return _maxStamina;
+        }
+        set
+        {
+            if (_maxStamina != 0f)
+            {
+            }
+        }
     }
     // Returns the distance as a string for UI display
     public string GetFormattedDistance()
