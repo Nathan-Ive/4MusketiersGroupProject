@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class StatsV1 : MonoBehaviour
 {
+
     [Header("State")]
     [Tooltip("Toggle this to start/stop counting distance.")]
     [SerializeField]  private bool _TrainingRoom = false;
@@ -14,6 +15,7 @@ public class StatsV1 : MonoBehaviour
     [SerializeField] private float _stamina = 100f;
     [SerializeField] private float _staminaDrainRate = 5.0f;
     [SerializeField] private float _maxStamina = 100f;
+
 
     public float Stamina
     {
@@ -37,6 +39,7 @@ public class StatsV1 : MonoBehaviour
             // Returns meters with 1 decimal place
             return _totalMeters.ToString("F1") + " m";
         }
+
     }
 
     void Update()
