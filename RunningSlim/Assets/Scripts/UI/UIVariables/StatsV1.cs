@@ -23,7 +23,7 @@ public class StatsV1 : MonoBehaviour
         {
             return _stamina;
         }
-        set { if(_stamina != 100f)
+        set { if(_stamina != _maxStamina)
             {
             } 
         }
