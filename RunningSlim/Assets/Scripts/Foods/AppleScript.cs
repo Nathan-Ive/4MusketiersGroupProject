@@ -6,6 +6,6 @@ abstract class AppleScript : FoodInheritance
 
     override public void Eating() 
     {
-        //_getStats.Stamina
+      //  _getStats.Stamina += 0.1 * _getStats.MaxStamina;
     }
 }
