@@ -1,6 +1,6 @@
 using UnityEngine;
 
-abstract class AppleScript : FoodInheritance
+ class AppleScript : FoodInheritance
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
