@@ -9,4 +9,10 @@ using UnityEngine;
         _getStats.Stamina +=  (_getStats.MaxStamina / 10);
        Debug.Log(_getStats.Stamina);
     }
+
+    public override void OnMouseDown()
+    {
+        Eating();
+        Destroy(gameObject);
+    }
 }

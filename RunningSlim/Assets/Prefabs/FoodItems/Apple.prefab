@@ -137,5 +137,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78650a4efb847fd4499b946b74e38b15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _name: 
-  _desc: 
+  _name: Apple
+  _desc: You get 10% of max stamina as stamina!
