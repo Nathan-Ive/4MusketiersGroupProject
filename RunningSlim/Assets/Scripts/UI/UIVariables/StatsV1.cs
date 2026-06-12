@@ -44,10 +44,11 @@ public class StatsV1 : MonoBehaviour
     {
         if (_trainingRoom == true)
         {
-            if (_stamina > 0)
+            if (_stamina >= 0)
             {
-                TrackDistance();
+                Debug.Log("You snooze you lose.");
             }
+            TrackDistance();
         }
     }
 
