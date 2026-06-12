@@ -65,7 +65,7 @@ public class StatsV1 : MonoBehaviour
         // Only run the logic if the player is in the training room and has stamina
         if (_TrainingRoom == true)
         {
-            if (_stamina > 0)
+            if (_stamina >= 0)
             {
                 TrackDistance();
             }
