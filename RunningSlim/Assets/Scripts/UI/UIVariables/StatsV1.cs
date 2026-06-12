@@ -67,8 +67,9 @@ public class StatsV1 : MonoBehaviour
         {
             if (_stamina >= 0)
             {
-                TrackDistance();
+                Debug.Log("You snooze you lose.");
             }
+            TrackDistance();
         }
     }
 

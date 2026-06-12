@@ -10,9 +10,13 @@ using UnityEngine;
     {
         _getStats = FindAnyObjectByType<StatsV1>();
     }
-    abstract public void Eating();
+    public abstract void Eating();
 
-     public abstract void OnMouseDown();
+     public virtual void OnMouseDown()
+    {
+        Eating();
+        Destroy(gameObject);
+    }
     //protected means that only the parent and child classes have acces to this
 
     
