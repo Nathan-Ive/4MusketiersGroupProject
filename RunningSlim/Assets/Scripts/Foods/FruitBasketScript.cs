@@ -1,11 +1,11 @@
 using UnityEngine;
 
- class CucumberScript : FoodInheritance
+ class FruitBasketScript : FoodInheritance
 {
     public override void Eating()
     {
-        _getStats.MaxStamina += 4;
-        Debug.Log("Max stamina:" + _getStats.MaxStamina);
+        _getStats.IncreaseMaxStamina(8);
+
 
     }
 

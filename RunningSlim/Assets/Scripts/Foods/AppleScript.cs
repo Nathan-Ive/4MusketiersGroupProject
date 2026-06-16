@@ -6,8 +6,9 @@ using UnityEngine;
 
     override public void Eating() 
     {
-        _getStats.Stamina +=  (_getStats.MaxStamina / 10);
-       Debug.Log("Stamina:" + _getStats.Stamina);
+        _getStats.AddStaminaFromMax(10);
+
+
     }
 
     public override void OnMouseDown()
