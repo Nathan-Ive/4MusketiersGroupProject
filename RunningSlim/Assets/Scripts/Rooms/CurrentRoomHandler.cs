@@ -36,4 +36,16 @@ public class CurrentRoomHandler : MonoBehaviour
         if (currentIndex < 0)
             currentIndex = roomCount - 1;
     }
+
+    public bool CookingTime(int currentIndex)
+    {
+        if(currentIndex < 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 }
