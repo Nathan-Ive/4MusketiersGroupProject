@@ -5,7 +5,7 @@ using UnityEngine;
     [SerializeField] private string _name;
     [SerializeField] private string _desc;
     //props best to use get set 
-    protected StatsV2 _getStats;
+    protected StatsV1 _getStats;
     void Start()
     {
         _getStats = FindAnyObjectByType<StatsV2>();
