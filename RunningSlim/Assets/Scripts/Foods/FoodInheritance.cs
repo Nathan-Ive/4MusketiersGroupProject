@@ -8,7 +8,7 @@ using UnityEngine;
     protected StatsV1 _getStats;
     void Start()
     {
-        _getStats = FindAnyObjectByType<StatsV1>();
+        _getStats = FindAnyObjectByType<StatsV2>();
     }
     public abstract void Eating();
 
