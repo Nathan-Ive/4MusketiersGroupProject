@@ -1,18 +1,16 @@
 using UnityEngine;
 
- class FruitBasket : FoodInheritance
+public class FruitBasketScript : MonoBehaviour
 {
-    public override void Eating()
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
     {
-        _getStats.MaxStamina += 12;
-        Debug.Log("Max stamina:" + _getStats.MaxStamina);
-
+        
     }
 
-    public override void OnMouseDown()
+    // Update is called once per frame
+    void Update()
     {
-        base.OnMouseDown();
+        
     }
-
-
 }
