@@ -2,15 +2,17 @@ using UnityEngine;
 
 public class CookingFunction : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private CurrentRoomHandler _inKitchen; private void Start()
     {
-        
+        _inKitchen = FindAnyObjectByType<CurrentRoomHandler>();
+    }
+       
+          
+
+    
+    
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-}
+
+
+

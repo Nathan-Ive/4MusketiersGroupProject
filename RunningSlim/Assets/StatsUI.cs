@@ -5,8 +5,8 @@ using UnityEngine.UI;
 public class StatsUI : MonoBehaviour
 {
     [Header("References")]
-<<<<<<< Updated upstream
-    public StatsV1 playerStats;
+//<<<<<<< Updated upstream
+    public StatsV2 playerStats;
     public TextMeshProUGUI distanceText;
     public Slider staminaBar;
 
@@ -29,7 +29,8 @@ public class StatsUI : MonoBehaviour
 
                 staminaBar.value = currentStamina / maxStamina;
             }
-=======
+/*
+ * =======
     public StatsV1 playerStats;        // Link to the main stats script
     public TextMeshProUGUI distanceText; // Link to the distance text object
     public TextMeshProUGUI staminaText;  // Link to the stamina numbers (e.g. 100/100)
@@ -58,6 +59,7 @@ public class StatsUI : MonoBehaviour
             // Updates the text to show whole numbers for stamina
             staminaText.text = current.ToString("F0") + " / " + max.ToString("F0");
 >>>>>>> Stashed changes
+*/
         }
     }
 }
