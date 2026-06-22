@@ -6,6 +6,8 @@ using UnityEngine;
     [SerializeField] private string _desc;
     //props best to use get set 
     protected StatsV2 _getStats;
+    protected CurrentRoomHandler _inKitchen;
+    protected GeneralFoodStash _foodStash;
     void Start()
     {
         _getStats = FindAnyObjectByType<StatsV2>();

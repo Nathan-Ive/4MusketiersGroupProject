@@ -102,7 +102,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _name: Fruit Basket
-  _desc: You gain 12 max stamina
+  _desc: You recover 15% stamina and gain 12 max stamina
 --- !u!61 &9155466973320384570
 BoxCollider2D:
   m_ObjectHideFlags: 0

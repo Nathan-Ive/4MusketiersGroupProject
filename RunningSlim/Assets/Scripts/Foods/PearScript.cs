@@ -12,6 +12,15 @@ using UnityEngine;
 
     public override void OnMouseDown()
     {
-        base.OnMouseDown();
+        if (_inKitchen.CookingTime(1))
+        {
+            _foodStash.AddPear();
+            Destroy(gameObject);
+        }
+        else
+        {
+            base.OnMouseDown();
+
+        }
     }
 }
