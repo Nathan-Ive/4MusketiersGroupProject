@@ -25,6 +25,9 @@ public class StatsV2 : MonoBehaviour
     public float GetStamina() => _stamina;
     public float GetMaxStamina() => _maxStamina;
 
+    // Lets other scripts (e.g. the win-condition tracker) read the raw distance in metres
+    public float GetDistance() => _totalMeters;
+
     // 1. Direct amount
     public float AddStamina(float amount)
     {

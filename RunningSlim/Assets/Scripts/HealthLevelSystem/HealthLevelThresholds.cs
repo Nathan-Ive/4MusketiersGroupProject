@@ -9,13 +9,13 @@ using UnityEngine.Events;
 /// <summary>
 /// Turns the distance run on the treadmill into a health level (Fat -> Fit) and decides when the game is won.
 ///
-/// This is the script that ties the treadmill (StatsV1) together with the win conditions: 
+/// This is the script that ties the treadmill (StatsV2) together with the win conditions:
 /// as the player runs, their fitness improves, and the game is won when the target distance is reached or the player becomes Fit.
 /// </summary>
 public class HealthLevelThresholds : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] private StatsV1 _playerStats;   // The distance tracker
+    [SerializeField] private StatsV2 _playerStats;   // The distance tracker
 
     [Header("Win Settings")]
     [SerializeField] private float _targetDistance = 1000f;  // Meters needed to win by distance
@@ -98,7 +98,8 @@ public class HealthLevelThresholds : MonoBehaviour
             _healthLevel = HealthLevels.Fat;
             _healthLevelDisplay = "Fat";
         }
-        _healthLabel.text = _healthLevelDisplay;
+        if (_healthLabel != null)
+            _healthLabel.text = _healthLevelDisplay;
     }
 
     /// <summary>

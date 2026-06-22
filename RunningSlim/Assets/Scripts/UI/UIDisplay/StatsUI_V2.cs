@@ -2,7 +2,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-public class StatsUIV2 : MonoBehaviour
+public class StatsUI_V2 : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private StatsV2 _playerStats;
