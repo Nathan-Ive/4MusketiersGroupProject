@@ -11,6 +11,8 @@ using UnityEngine;
     void Start()
     {
         _getStats = FindAnyObjectByType<StatsV2>();
+        _inKitchen = FindAnyObjectByType<CurrentRoomHandler>();
+        _foodStash = FindAnyObjectByType<GeneralFoodStash>();
     }
     public abstract void Eating();
 

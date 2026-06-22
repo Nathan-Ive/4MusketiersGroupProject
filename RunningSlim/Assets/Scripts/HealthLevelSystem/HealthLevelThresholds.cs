@@ -18,8 +18,8 @@ public class HealthLevelThresholds : MonoBehaviour
     [SerializeField] private StatsV2 _playerStats;   // The distance tracker
 
     [Header("Win Settings")]
-    [SerializeField] private float _targetDistance = 1000f;  // Meters needed to win by distance
-    [SerializeField] private float _metersToGetFit = 2000f;  // Meters of running that take you from Fat to Fit
+    [SerializeField] private float _targetDistance = 100f;  // Meters needed to win by distance (the longer, backup path)
+    [SerializeField] private float _metersToGetFit = 80f;   // Fitness metres for Fat -> Fit; Fit triggers at 80% = 64 m (the quick path)
 
     [Header("Read-only (shown for debugging)")]
     [SerializeField] private float _healthPercentage = 0.0f; // 0 = Fat, 1 = Fit
@@ -54,7 +54,9 @@ public class HealthLevelThresholds : MonoBehaviour
     /// </summary>
     private void UpdateFitness()
     {
-        float distance = _playerStats.GetDistance();
+        // Health/fitness reads the separate "health distance", which unhealthy food can
+        // lower - so it stays independent of the total distance ran used for the distance win.
+        float distance = _playerStats.GetHealthDistance();
 
         if (_metersToGetFit > 0f)
             _healthPercentage = Mathf.Clamp01(distance / _metersToGetFit);
