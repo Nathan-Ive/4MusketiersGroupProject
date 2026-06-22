@@ -95,6 +95,18 @@ public class RoomSwapper : MonoBehaviour
         SwapToCurrentRoom();
     }
 
+    /// <summary>
+    /// Routes a direction (e.g. from the InputManager's OnDirectionPressed event) to the
+    /// next/previous room. Right/up goes to the next room, left/down goes to the previous one.
+    /// </summary>
+    public void Navigate(Vector2Int direction)
+    {
+        if (direction.x > 0 || direction.y > 0)
+            GoToNextRoom();
+        else if (direction.x < 0 || direction.y < 0)
+            GoToPreviousRoom();
+    }
+
 
 
 

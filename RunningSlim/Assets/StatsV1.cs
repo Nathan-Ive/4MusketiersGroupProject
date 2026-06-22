@@ -26,6 +26,33 @@ public class StatsV1 : MonoBehaviour
         return _maxStamina;
     }
 
+    // Lets other scripts (e.g. the win-condition tracker) read the raw distance in metres
+    public float GetDistance()
+    {
+        return _totalMeters;
+    }
+
+    // Lets the training-room gate turn running on and off. The field stays private
+    // so the inspector toggle still works for quick testing.
+    public bool Training
+    {
+        get { return _trainingRoom; }
+        set { _trainingRoom = value; }
+    }
+
+    // Property access used by the food scripts (AppleScript / CucumberScript).
+    public float Stamina
+    {
+        get { return _stamina; }
+        set { _stamina = Mathf.Min(value, _maxStamina); }
+    }
+
+    public float MaxStamina
+    {
+        get { return _maxStamina; }
+        set { _maxStamina = value; }
+    }
+
     // Turns the meter count into a readable text format (meters or kilometers)
     public string GetFormattedDistance()
     {
