@@ -17,11 +17,15 @@ public class GeneralFoodStash : MonoBehaviour
         pearStash++;
     }
 
+    
+
     public bool CreateFruitBasket(bool bakeIt)
     {
         if(appleStash >= 2 & pearStash >= 1)
         {
             bakeIt = true;
+            appleStash -= 2;
+            pearStash -= 1;
         }
         else
         {
