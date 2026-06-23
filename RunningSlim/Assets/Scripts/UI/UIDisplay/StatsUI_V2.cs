@@ -8,32 +8,42 @@ public class StatsUIV2 : MonoBehaviour
     [SerializeField] private StatsV2 _playerStats;
     [SerializeField] private TextMeshProUGUI _distanceText;
     [SerializeField] private TextMeshProUGUI _staminaText;
-    [SerializeField] private Slider _staminaBar;
+
+    [Header("Bar Settings")]
+    [SerializeField] private RectTransform _barBackgroundRect;
+    [SerializeField] private Image _staminaFillImage;
+    [SerializeField] private float _widthPerStaminaUnit = 2f; // How many pixels wide 1 stamina point is
 
     void Update()
     {
-        // Safety check
-        if (_playerStats == null)
-        {
-            return;
-        }
+        if (_playerStats == null) return;
 
-        // Update the distance text
+        // 1. Update Distance Text
         if (_distanceText != null)
         {
             _distanceText.text = "Distance: " + _playerStats.GetFormattedDistance();
         }
 
-        // Update the bar and the number overlay
-        if (_staminaBar != null && _staminaText != null)
+        // 2. Update Stamina Logic
+        float current = _playerStats.GetStamina();
+        float max = _playerStats.GetMaxStamina();
+
+        // Update the physical width of the bar based on Max Stamina
+        if (_barBackgroundRect != null)
         {
-            float current = _playerStats.GetStamina();
-            float max = _playerStats.GetMaxStamina();
+            float targetWidth = max * _widthPerStaminaUnit;
+            _barBackgroundRect.sizeDelta = new Vector2(targetWidth, _barBackgroundRect.sizeDelta.y);
+        }
 
-            // Set bar fill (0 to 1)
-            _staminaBar.value = current / max;
+        // Update the fill amount (0 to 1)
+        if (_staminaFillImage != null)
+        {
+            _staminaFillImage.fillAmount = current / max;
+        }
 
-            // Set text (e.g., "85 / 100")
+        // Update the text overlay
+        if (_staminaText != null)
+        {
             _staminaText.text = current.ToString("F0") + " / " + max.ToString("F0");
         }
     }
