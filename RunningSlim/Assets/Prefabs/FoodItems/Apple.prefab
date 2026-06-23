@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 669076254107750459}
   - component: {fileID: 752925544771646309}
-  - component: {fileID: 8623284566319899993}
   - component: {fileID: 6997067372992016809}
+  - component: {fileID: 2241918124072471034}
   m_Layer: 0
   m_Name: Apple
   m_TagString: Untagged
@@ -89,19 +89,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8623284566319899993
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4515475757104514911}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5506d251d65018048a0d4930b2761d21, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _name: Apple
 --- !u!58 &6997067372992016809
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -138,3 +125,17 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
+--- !u!114 &2241918124072471034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4515475757104514911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78650a4efb847fd4499b946b74e38b15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _name: Apple
+  _desc: You get 10% of max stamina as stamina!
